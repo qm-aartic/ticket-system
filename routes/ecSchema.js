@@ -1,7 +1,7 @@
 const express = require('express');
 const { ECircumstance,validate } = require('../models/ecSchema');
 const router = express.Router();
-
+// testing commit. This will be committed 
 
 router.get('/', async (req,res) => {
     const ECS = await ECircumstance.find();
