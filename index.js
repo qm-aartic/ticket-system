@@ -3,6 +3,7 @@ const express = require('express');
 const mongoose = require('mongoose');
 const ecSchema = require('./routes/ecSchema');
 const issues = require('./routes/issues');
+const users = require('./routes/users.js');
 
 const app = express();
 
@@ -10,6 +11,7 @@ app.use(express.json());
 app.use(cors());
 app.use('/api/ecircum',ecSchema);
 app.use('/api/issues',issues);
+app.use('/api/users',users);
 
 
 
