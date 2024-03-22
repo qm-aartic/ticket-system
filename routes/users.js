@@ -13,11 +13,14 @@ router.post('/', async (req,res) => {
     // if (error) return res.status(404).send(error.details[0].message);
 
     let newUsers = new Users({
-        userID: req.body.userID,
         firstName: req.body.firstName,
         lastName: req.body.lastName,
         email: req.body.email,
         password: req.body.password,
+        department: req.body.department,
+        moduleID: req.body.moduleID,
+        urgentEC: req.body.urgentEC,
+        amountOfEC: req.body.amountOfEC,
     });
 
     newUsers = await newUsers.save();
