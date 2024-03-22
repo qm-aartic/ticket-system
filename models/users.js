@@ -2,12 +2,14 @@ const mongoose = require('mongoose');
 const Joi = require('joi');
 
 const users = new mongoose.Schema({
-    userID: {type: Number, required: true},
     firstName: {type: String, required: true},
     lastName: {type: String, required: true},
     email: {type: String, required: true},
     password: {type: String, required: true},
-   
+    department: {type: String, required: false},
+    moduleID: {type: String, required: false},
+    urgentEC: {type: Boolean, required: true},
+    amountOfEC: {type: Number, required: false},
 })
 
 const Users = mongoose.model('Users',users);
